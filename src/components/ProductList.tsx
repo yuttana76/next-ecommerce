@@ -92,11 +92,15 @@ const productQuery = wixClient.products
                 <button  className='rounded-2xl w-max ring-1 ring-lama text-lama py-2 px-4 text-xs hover:bg-lama hover:text-white'>Add to cart</button>
             </Link>
         ))}
-        <Pagination 
+
+        {searchParams?.cat || searchParams?.name ? (
+            <Pagination 
             currentPage={res.currentPage || 0} 
             hasPrev={res.hasPrev()}  
             hasNext={res.hasNext()}
             />
+        ):null}
+        
     </div>
   )
 }
