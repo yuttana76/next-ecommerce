@@ -18,7 +18,8 @@ const SinglePage = async ({params}:{params:{slug:string}}) => {
   }
 
   const product = products.items[0]
-  console.log(product)
+
+  // ! Have to create review componenet
 
   return (
     <div className='px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative flex flex-col lg:flex-row gap-16'>
@@ -43,7 +44,7 @@ const SinglePage = async ({params}:{params:{slug:string}}) => {
       {product.variants && product.productOptions ? (
         <CustomizeProducts productId={product._id!} variants={product.variants} productOptions={product.productOptions} />
         ):(
-        <Add productId={product._id} variantId="00000" stockNumber={product.stock?.quantity || 0} />
+        <Add productId={product._id!} variantId="00000" stockNumber={product.stock?.quantity || 0} />
         )
       }
       
@@ -55,8 +56,14 @@ const SinglePage = async ({params}:{params:{slug:string}}) => {
           {section.description}
         </p>
       </div>
-
       ))}
+
+      {/* REVIEWS */}
+      <div>
+      </div>
+      {/* REVIEWS */}
+      
+      <h2>Useer reviews</h2>
 
       
       
