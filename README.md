@@ -39,6 +39,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Create workflows file(yml)
 
+Create docker file
+
 Set environment
     /settings/secrets/actions
         Repository secrets
