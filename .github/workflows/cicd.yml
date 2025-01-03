@@ -31,11 +31,11 @@ jobs:
     needs: build
     runs-on: self-hosted 
     steps:
-      - name: Stop container
-        run: docker stop next-ecommerce
+    #   - name: Stop container
+    #     run: docker stop next-ecommerce
 
-      - name: Delete images
-        run: docker image prune -f
+    #   - name: Delete images
+    #     run: docker image prune -f
 
       - name: Pull image from docker hub
         run: docker pull yuttana76/next-ecommerce:latest 
