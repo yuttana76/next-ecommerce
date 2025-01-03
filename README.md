@@ -34,3 +34,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ 
+### AWS/CICD setting
+
+Create workflows file(yml)
+
+Set environment
+    /settings/secrets/actions
+        Repository secrets
+
+Set action runner
+    /settings/actions/runners
+
+
+AWS console
+setup github runner
+ Github  Setting\Actions\Runners\ <Create hosted runner>
+
+ AWS Final command
+'''
+sudo ./svc.sh install 
+'''
+
+'''
+sudo ./svc.sh start
+'''
