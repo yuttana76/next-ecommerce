@@ -35,22 +35,36 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
  
-### AWS/CICD setting
+# AWS/Githu CICD setting
 
-Create workflows file(yml)
+1. Create workflows file(yml)
 
-Create docker file
+2. Create docker file
 
-Set environment
+## Github setting 
+### Set environment
     /settings/secrets/actions
         Repository secrets
 
-Set action runner
+### Set action runner
     /settings/actions/runners
 
 
-AWS console
-setup github runner
+## AWS Setting
+### run asw console
+
+### Install Docker AWS
+sudo apt-get update 
+sudo apt-get install docker.io -y 
+sudo systemctl start docker 
+sudo docker run hello-world
+
+
+sudo chmod 666 /var/run/docker.sock 
+sudo systemctl enable docker docker --version docker ps
+
+
+### setup github runner
  Github  Setting\Actions\Runners\ <Create hosted runner>
 
  AWS Final command
